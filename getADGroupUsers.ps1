@@ -1,0 +1,1 @@
+Get-ADGroupMember -Identity ‘namegroup’ | foreach { Get-ADUser $_ -Properties * } | Format-Table Name,Displayname, mail -AutoSize | Out-File -Width 5000 "C:\Users\cetadmtth\Desktop\namegroup.txt"
